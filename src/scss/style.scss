@@ -1,0 +1,9 @@
+@import "variables";
+
+nav {
+    background-color: map-get($colours, brand-black);
+
+    & .logo {
+height: 5rem;
+    }
+}

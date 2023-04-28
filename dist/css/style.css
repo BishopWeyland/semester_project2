@@ -1,3 +1,8 @@
-
+nav {
+  background-color: #191919;
+}
+nav .logo {
+  height: 5rem;
+}
 
 /*# sourceMappingURL=style.css.map */
