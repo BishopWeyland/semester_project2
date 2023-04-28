@@ -1,0 +1,28 @@
+{
+  "name": "semester_project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BishopWeyland/semester_project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BishopWeyland/semester_project2/issues"
+  },
+  "homepage": "https://github.com/BishopWeyland/semester_project2#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
