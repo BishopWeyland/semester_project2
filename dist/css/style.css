@@ -1,8 +1,50 @@
+body {
+  background-color: #fbfbfb;
+}
+
+.btn-light {
+  background-color: #798DFB !important;
+  border: none !important;
+}
+.btn-light:hover {
+  background-image: linear-gradient(to right, #798dfb, #c7e5ff) !important;
+}
+
+.btn-dark {
+  background-color: #1D223D !important;
+  border: none !important;
+}
+.btn-dark:hover {
+  background-image: linear-gradient(to right, #191919, #798dfb) !important;
+}
+
 nav {
   background-color: #191919;
 }
 nav .logo {
   height: 5rem;
+}
+
+.hero {
+  background: linear-gradient(#798dfb, #c7e5ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero .hero-logo {
+  height: 10rem;
+}
+.hero .hero-img {
+  height: 13.9rem;
+}
+
+.hero-img img {
+  height: 15rem;
+}
+
+.img-right {
+  display: flex;
+  justify-content: end;
 }
 
 /*# sourceMappingURL=style.css.map */
