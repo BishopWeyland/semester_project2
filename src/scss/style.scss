@@ -30,6 +30,11 @@ nav {
   }
 }
 
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
 .hero {
   background: linear-gradient(#798dfb, #c7e5ff);
   display: flex;
@@ -52,4 +57,26 @@ nav {
 .img-right {
   display: flex;
   justify-content: end;
+}
+
+.listing-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listing-card {
+  background-color: map-get($colours, brand-grey);
+  margin: 20px;
+  height: 450px;
+  border-radius: 3px;
+  & img {
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 3px 3px 0px 0px;
+  }
+}
+
+.current-bid {
+  color: #268317;
 }
