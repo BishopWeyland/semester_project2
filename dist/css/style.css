@@ -2,6 +2,10 @@ body {
   background-color: #fbfbfb;
 }
 
+ul {
+  list-style: none;
+}
+
 .btn-light {
   background-color: #798dfb !important;
   border: none !important;
@@ -52,16 +56,32 @@ nav .logo {
   justify-content: end;
 }
 
+.call-to-action {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .listing-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .listing-card {
   background-color: #f2f2f2;
   margin: 20px;
-  height: 450px;
+  width: 400px;
   border-radius: 3px;
+}
+.listing-card h2,
+.listing-card p {
+  margin: 20px;
 }
 .listing-card img {
   height: 300px;

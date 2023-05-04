@@ -4,6 +4,10 @@ body {
   background-color: map-get($colours, brand-white);
 }
 
+ul {
+  list-style: none;
+}
+
 .btn-light {
   background-color: map-get($colours, brand-blue) !important;
   border: none !important;
@@ -59,16 +63,34 @@ nav {
   justify-content: end;
 }
 
+.call-to-action {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .listing-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .listing-card {
   background-color: map-get($colours, brand-grey);
   margin: 20px;
-  height: 450px;
+  width: 400px;
   border-radius: 3px;
+
+  & h2,
+  p {
+    margin: 20px;
+  }
+
   & img {
     height: 300px;
     width: 400px;
