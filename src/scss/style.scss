@@ -102,3 +102,37 @@ nav {
 .current-bid {
   color: #268317;
 }
+
+.advert-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advert-img {
+  background: linear-gradient(#798dfb, #c7e5ff);
+  height: 17rem;
+  & img {
+    height: 18rem;
+  }
+}
+
+.advert-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+}
+
+footer {
+  background-color: map-get($colours, brand-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  & img {
+    height: 3rem;
+  }
+}
