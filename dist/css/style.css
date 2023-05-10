@@ -2,8 +2,24 @@ body {
   background-color: #fbfbfb;
 }
 
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  color: white !important;
+  border-bottom: 2px solid white;
+}
+
 ul {
   list-style: none;
+}
+
+.btn:hover {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.13);
 }
 
 .btn-light {
@@ -12,6 +28,7 @@ ul {
 }
 .btn-light:hover {
   background-image: linear-gradient(to right, #798dfb, #c7e5ff) !important;
+  color: black !important;
 }
 
 .btn-dark {
@@ -24,14 +41,41 @@ ul {
 
 nav {
   background-color: #191919;
+  display: flex;
+  justify-content: space-between;
 }
 nav .logo {
   height: 5rem;
 }
 
+.home-link:hover {
+  border-bottom: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30rem;
+}
+.menu i,
+.menu a {
+  color: white;
+}
+
 .justify-content-center {
   display: flex;
   justify-content: center;
+}
+
+.justify-align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero {
@@ -75,19 +119,24 @@ nav .logo {
 
 .listing-card {
   background-color: #f2f2f2;
-  margin: 20px;
   width: 400px;
   border-radius: 3px;
-}
-.listing-card h2,
-.listing-card p {
-  margin: 20px;
 }
 .listing-card img {
   height: 300px;
   width: 400px;
   object-fit: cover;
   border-radius: 3px 3px 0px 0px;
+}
+.listing-card h2,
+.listing-card p {
+  color: black;
+}
+.listing-card:hover {
+  transform: scale(105%);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 7px 22px 0 rgba(0, 0, 0, 0.2);
 }
 
 .current-bid {
@@ -112,7 +161,6 @@ nav .logo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40rem;
 }
 
 footer {
@@ -122,8 +170,24 @@ footer {
   align-items: center;
 }
 
+.footer-content {
+  display: flex;
+  align-items: center;
+}
 .footer-content img {
   height: 3rem;
+}
+.footer-content span {
+  color: white;
+}
+
+.form-container {
+  background: linear-gradient(#798dfb, #c7e5ff);
+  border-radius: 3px;
+  height: 80vh;
+}
+.form-container .btn {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
