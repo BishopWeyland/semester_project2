@@ -52,11 +52,13 @@ async function getListings(url) {
         listings.forEach((item) => {
           const media = item.media ? `<img src="${item.media}"/>` : "";
           listingContainer.innerHTML += `
-    <div class="listing-card">
-        <img src="${item.media}"/>
-        <h2>${item.title}</h2>
-        <p>Current bid: <span class="current-bid">${item._count.bids} credits</span></p>
-    </div>`;
+          <a href="">
+            <div class="listing-card m-4 pb-4">
+                <img src="${item.media}"/>
+                <h2 class="mx-3">${item.title}</h2>
+                <p class="mx-3">Current bid: <span class="current-bid">${item._count.bids} credits</span></p>
+            </div>
+          </a>`;
         });
       }
     }
