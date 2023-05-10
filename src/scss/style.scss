@@ -199,9 +199,13 @@ footer {
 .form-container {
   background: linear-gradient(#798dfb, #c7e5ff);
   border-radius: 3px;
-  height: 80vh;
+  height: 70vh;
 
   & .btn {
     width: 100%;
   }
+}
+
+.login-img {
+  height: 13rem;
 }
