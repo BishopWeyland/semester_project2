@@ -204,4 +204,31 @@ footer {
   height: 13rem;
 }
 
+.single-listing-container {
+  display: flex;
+}
+
+.listing-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.listing-content {
+  background-color: #f2f2f2;
+}
+
+.timer {
+  color: #b20909;
+}
+
+.seller-link {
+  color: black;
+  font-weight: bold;
+}
+.seller-link:hover {
+  color: black !important;
+  border-bottom: 2px solid black;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title></title>
     <link rel="stylesheet" href="./dist/css/style.css" />
     <link
       rel="stylesheet"
@@ -53,83 +53,17 @@
         </div>
       </div>
     </nav>
-    <div class="hero col-12">
-      <img
-        class="hero-logo"
-        src="/images/quickbids_logo.png"
-        alt="Quickbids logo"
-      />
-      <h1>Buy or sell from anywhere!</h1>
-      <div class="call-to-action">
-        <a class="btn btn-light" href="login.html">Login</a>
-        <a class="btn btn-dark" href="create-account.html">Create account</a>
-      </div>
-      <div class="img-right col-8">
-        <div class="hero-img">
-          <img
-            src="/images/undraw_heavy_box_agqi.svg"
-            alt="Vector art of a man sitting on a large box."
-          />
-        </div>
-      </div>
+    <div class="col-12 m-5 single-listing-container">
+      <div class="listing-img col-12 col-md-5"></div>
+      <div class="listing-content col-12 col-md-7 p-4"></div>
     </div>
-    <div class="justify-content-center">
-      <div class="col-md-10 col-sm-12 mt-5">
-        <h2>Listings:</h2>
-      </div>
-    </div>
-
-    <div class="justify-content-center">
-      <div class="filter-container col-md-10 col-sm-12 mb-4">
-        <form action="" id="search-form">
-          <input
-            type="search"
-            placeholder="Search"
-            id="search-input"
-            name="term"
-          />
-        </form>
-
-        <select
-          name="select-listings"
-          id="select-listings"
-          value="all-listings"
-        >
-          <option value="all-listings">All listings</option>
-          <option value="my-posts">My listings</option>
-        </select>
-      </div>
-    </div>
-    <div class="justify-content-center">
-      <div class="listing-container col-md-10 col-sm-12"></div>
-    </div>
-    <div class="justify-content-center">
-      <div class="col-md-10 col-sm-12 mt-5">
-        <div class="col-md-10 col-sm-12 advert-container">
-          <div class="advert-content col-md-5 col-sm-6">
-            <h2>Get 1000 free credits</h2>
-            <h3>when you register today!</h3>
-            <a href="create-account.html" class="btn btn-dark"
-              >Create account</a
-            >
-          </div>
-          <div class="advert-img col-md-5 col-sm-6 p-4">
-            <img
-              src="/images/undraw_gift_card_re_5dyy.svg"
-              alt="Vector of a woman with a gift card."
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-
     <footer class="mt-5">
       <div class="footer-content p-4">
         <img src="/images/quickbids_logo_white.png" alt="Quickbids logo." />
         <span class="ms-3">2023©</span>
       </div>
     </footer>
-    <script src="/src/js/api/listings.js" type="module"></script>
+    <script src="/src/js/api/single-listing.js" type="module"></script>
     <script src="/src/js/api/menu-without-token.js" type="module"></script>
     <script src="/src/js/api/logout.js"></script>
     <script

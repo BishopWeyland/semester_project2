@@ -1,4 +1,5 @@
 import { API_BASE_URL } from "./baseurl.js";
+import { userName } from "./storage.mjs";
 
 const listingContainer = document.querySelector(".listing-container");
 
@@ -28,6 +29,22 @@ async function getListings(url) {
       renderListings(filteredData);
     });
 
+    function myListings() {
+      return json.filter((item) => item.author.name === userName);
+    }
+
+    const postsSelect = document.querySelector("#select-listings");
+
+    postsSelect.addEventListener("change", (e) => {
+      if (e.target.value === "my-listings") {
+        filteredData = myListings();
+      } else {
+        filteredData = json;
+      }
+
+      renderListings(filteredData);
+    });
+
     function renderListings(listings) {
       listingContainer.innerHTML = "";
       if (!listings.length) {
@@ -36,7 +53,7 @@ async function getListings(url) {
         listings.forEach((item) => {
           const media = item.media ? `<img src="${item.media}"/>` : "";
           listingContainer.innerHTML += `
-          <a href="">
+          <a href="single-listing.html?id=${item.id}">
             <div class="listing-card m-4 pb-4">
                 <img src="${item.media}"/>
                 <h2 class="mx-3">${item.title}</h2>
@@ -53,4 +70,4 @@ async function getListings(url) {
   }
 }
 
-getListings(`${API_BASE_URL}/api/v1/auction/listings/?_seller=true`);
+getListings(`${API_BASE_URL}/api/v1/auction/listings/?_seller=true&_bids=true`);
