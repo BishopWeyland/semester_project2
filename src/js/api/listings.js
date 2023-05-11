@@ -28,22 +28,6 @@ async function getListings(url) {
       renderListings(filteredData);
     });
 
-    // function myListings() {
-    //   return json.filter((item) => item.author.name === userName);
-    // }
-
-    // const postsSelect = document.querySelector("#select-listings");
-
-    // postsSelect.addEventListener("change", (e) => {
-    //   if (e.target.value === "my-listings") {
-    //     filteredData = myListings();
-    //   } else {
-    //     filteredData = json;
-    //   }
-
-    //   renderPosts(filteredData);
-    // });
-
     function renderListings(listings) {
       listingContainer.innerHTML = "";
       if (!listings.length) {

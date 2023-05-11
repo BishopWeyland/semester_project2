@@ -17,6 +17,14 @@ ul {
   list-style: none;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: inherit;
+}
+
 .btn:hover {
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
@@ -43,6 +51,21 @@ ul {
     background-image: linear-gradient(to right, #191919, #798dfb) !important;
   }
 }
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.justify-align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 
 nav {
   background-color: map-get($colours, brand-black);
@@ -64,20 +87,12 @@ nav {
   border-bottom: none;
 }
 
-.justify-content-center {
-  display: flex;
-  justify-content: center;
-}
+.logout-button {
+  color: white;
 
-.justify-align-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
+  &:hover {
+    border-bottom: 2px solid white;
+  }
 }
 
 .hero {
