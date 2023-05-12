@@ -8,7 +8,7 @@ function checkLength(value, length) {
 }
 
 function validateEmail(email) {
-  const regEx = /\S+@\S+\.\S+/;
+  const regEx = /^[a-zA-Z0-9._%+-]+@(noroff\.no|stud\.noroff\.no)$/;
   const patternMatch = regEx.test(email);
   return patternMatch;
 }
