@@ -38,6 +38,8 @@ const getListing = async function (url) {
 
     if (now > date) {
       timer = `<p class="timer">The time has run out</p>`;
+      const bidForm = document.getElementById("bid-form");
+      bidForm.style.display = "none";
     } else {
       const diff = date - now;
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
