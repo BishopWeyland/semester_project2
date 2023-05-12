@@ -52,7 +52,6 @@ const getListing = async function (url) {
     const fallbackImage = "../../images/undraw_snap_the_moment_re_88cu.svg";
 
     listingImg.innerHTML = `<img src="${item.media}" onerror="this.src='${fallbackImage}'"/>`;
-
     listingContent.innerHTML = `
 <div class="listing-description mb-5">
     <h1>${item.title}</h1>
@@ -61,7 +60,7 @@ const getListing = async function (url) {
 <div class="listing-info">
     <p>Current bid: <span class="current-bid">${currentBid}</span></p>
     ${timer}
-    <p>Seller: <a href="" class="seller-link">${item.seller.name}</a></p>
+    <p>Seller: <a href="profile.html?name=${item.seller.name}" class="seller-link">${item.seller.name}</a></p>
 </div>
 `;
     title.innerHTML = `${item.title} | QuickBids`;
