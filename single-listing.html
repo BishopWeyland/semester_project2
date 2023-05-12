@@ -53,9 +53,27 @@
         </div>
       </div>
     </nav>
-    <div class="col-12 m-5 single-listing-container">
-      <div class="listing-img col-12 col-md-5"></div>
-      <div class="listing-content col-12 col-md-7 p-4"></div>
+    <div class="col-12 m-5 single-listing-containe justify-content-center">
+      <div class="listing-img col-12 col-md-4 me-4"></div>
+      <div class="listing-content-container col-12 col-md-6 p-4">
+        <div class="listing-content"></div>
+        <div class="bid-form-container">
+          <form id="bid-form">
+            <input
+              type="number"
+              id="bid-input"
+              name="bid"
+              min="1"
+              max="1000"
+              required
+            />
+            <button class="btn btn-dark" type="submit" id="bid-button">
+              Place Bid
+            </button>
+          </form>
+          <button class="btn btn-light" id="bid-button">View bids</button>
+        </div>
+      </div>
     </div>
     <footer class="mt-5">
       <div class="footer-content p-4">
@@ -66,6 +84,7 @@
     <script src="/src/js/api/single-listing.js" type="module"></script>
     <script src="/src/js/api/menu-without-token.js" type="module"></script>
     <script src="/src/js/api/logout.js"></script>
+    <script src="/src/js/api/place-bid.js" type="module"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
