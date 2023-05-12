@@ -1,5 +1,6 @@
 import { API_BASE_URL } from "./baseurl.js";
 import { userName } from "./storage.mjs";
+import { getCurrentBid } from "./curren-bids.js";
 
 const listingContainer = document.querySelector(".listing-container");
 
@@ -51,13 +52,15 @@ async function getListings(url) {
         listingContainer.innerHTML = "no results";
       } else {
         listings.forEach((item) => {
+          const allBids = item.bids;
+          const currentBid = getCurrentBid(allBids);
           const media = item.media ? `<img src="${item.media}"/>` : "";
           listingContainer.innerHTML += `
           <a href="single-listing.html?id=${item.id}">
             <div class="listing-card m-4 pb-4">
                 <img src="${item.media}"/>
                 <h2 class="mx-3">${item.title}</h2>
-                <p class="mx-3">Current bid: <span class="current-bid">${item._count.bids} credits</span></p>
+                <p class="mx-3">Current bid: <span class="current-bid">${currentBid} credits</span></p>
             </div>
           </a>`;
         });

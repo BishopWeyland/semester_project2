@@ -1,5 +1,8 @@
 import { API_BASE_URL } from "./baseurl.js";
 import { token } from "./storage.mjs";
+import { getCurrentBid } from "./curren-bids.js";
+
+export { id };
 
 const queryString = document.location.search;
 
@@ -25,14 +28,7 @@ const getListing = async function (url) {
 
     const allBids = item.bids;
 
-    let currentBid = 0;
-
-    for (let i = 0; i < allBids.length; i++) {
-      const obj = allBids[i];
-      if (obj.amount > currentBid) {
-        currentBid = obj.amount;
-      }
-    }
+    const currentBid = getCurrentBid(allBids);
 
     const timestamp = item.endsAt;
     const date = new Date(timestamp);
