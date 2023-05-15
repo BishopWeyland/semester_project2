@@ -253,3 +253,17 @@ footer {
 #bid-form {
   display: block;
 }
+
+.scrollable-container {
+  height: 200px;
+  overflow: auto;
+}
+
+.view-bids {
+  background-color: map-get($colours, brand-white);
+}
+
+.bids-info {
+  display: flex;
+  flex-direction: row;
+}

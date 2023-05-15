@@ -236,4 +236,18 @@ footer {
   display: block;
 }
 
+.scrollable-container {
+  height: 200px;
+  overflow: auto;
+}
+
+.view-bids {
+  background-color: #fbfbfb;
+}
+
+.bids-info {
+  display: flex;
+  flex-direction: row;
+}
+
 /*# sourceMappingURL=style.css.map */

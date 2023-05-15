@@ -49,6 +49,20 @@ const getListing = async function (url) {
       timer = `<p>Time left: <span class="timer">${days} days, ${hours} hours, ${minutes} minutes.</span></p>`;
     }
 
+    const viewBids = document.querySelector(".view-bids");
+
+    if (item.bids.length === 0) {
+      viewBids.innerHTML = "<p>No bids for this item.</p>";
+    } else {
+      for (let i = 0; i < item.bids.length; i++) {
+        viewBids.innerHTML += `
+      <div class="bids-info">
+        <p class="me-5">Amount: <span class="current-bid">${item.bids[i].amount} credits</span></p>
+        <p>Bidder: <a href="profile.html?name=${item.bids[i].bidderName}" class="seller-link">${item.bids[i].bidderName}</a></p>
+      </div>`;
+      }
+    }
+
     const fallbackImage = "../../images/undraw_snap_the_moment_re_88cu.svg";
 
     listingImg.innerHTML = `<img src="${item.media}" onerror="this.src='${fallbackImage}'"/>`;

@@ -71,7 +71,22 @@
               Place Bid
             </button>
           </form>
-          <button class="btn btn-light" id="bid-button">View bids</button>
+          <div>
+            <button
+              class="btn btn-light mb-3"
+              id="view-bid-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              View bids
+            </button>
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div class="view-bids scrollable-container p-3"></div>
+          </div>
         </div>
       </div>
     </div>
