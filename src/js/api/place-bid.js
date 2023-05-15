@@ -9,8 +9,9 @@ if (!token) {
 }
 
 const makeBid = async (url, data) => {
+  let response;
   try {
-    const response = await fetch(url, {
+    response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,6 +20,11 @@ const makeBid = async (url, data) => {
       body: JSON.stringify(data),
     });
 
+    if (response.status === 400) {
+      const errorResponse = await response.json();
+      throw new Error(errorResponse.message);
+    }
+
     const jsonResponse = await response.json();
     return jsonResponse;
   } catch (error) {
@@ -26,6 +32,11 @@ const makeBid = async (url, data) => {
     throw new Error(`Error making bid: ${error.message}`);
   } finally {
     document.getElementById("bid-input").value = "";
+    const message =
+      response && response.status === 400
+        ? "You need to place a bid that is higher than the current bid!"
+        : "Your bid has been placed!";
+    alert(message);
   }
 };
 
