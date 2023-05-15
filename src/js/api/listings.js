@@ -54,11 +54,12 @@ async function getListings(url) {
         listings.forEach((item) => {
           const allBids = item.bids;
           const currentBid = getCurrentBid(allBids);
-          const media = item.media ? `<img src="${item.media}"/>` : "";
+          const fallbackImage =
+            "../../images/undraw_snap_the_moment_re_88cu.svg";
           listingContainer.innerHTML += `
           <a href="single-listing.html?id=${item.id}">
             <div class="listing-card m-4 pb-4">
-                <img src="${item.media}"/>
+                <img src="${item.media}" onerror="this.src='${fallbackImage}'"/>
                 <h2 class="mx-3">${item.title}</h2>
                 <p class="mx-3">Current bid: <span class="current-bid">${currentBid} credits</span></p>
             </div>
