@@ -223,13 +223,20 @@ footer {
 // single-listing page
 .single-listing-container {
   display: flex;
-  height: 50vh;
+  height: 70vh;
+}
+
+.listing-img {
+  background-color: map-get($colours, brand-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .listing-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
 .listing-content-container {
@@ -251,7 +258,9 @@ footer {
 }
 
 #bid-form {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
 .scrollable-container {
@@ -261,6 +270,10 @@ footer {
 
 .view-bids {
   background-color: map-get($colours, brand-white);
+}
+
+#view-bid-button {
+  width: 50%;
 }
 
 .bids-info {
