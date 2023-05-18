@@ -1,5 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Roboto&display=swap");
+:root {
+  --bs-body-font-family: "Roboto", sans-serif;
+}
+
 body {
   background-color: #fbfbfb;
+}
+
+h1,
+h2 {
+  font-family: "Kanit", sans-serif;
 }
 
 a {
@@ -47,6 +57,21 @@ button {
   background-image: linear-gradient(to right, #191919, #798dfb) !important;
 }
 
+select {
+  background-color: initial;
+  width: auto;
+  padding: unset;
+  border: none;
+  border-radius: 0;
+  height: auto;
+}
+
+#select-listings {
+  background-color: #1d223d;
+  color: white;
+  border-radius: 3px;
+}
+
 .justify-content-center {
   display: flex;
   justify-content: center;
@@ -71,6 +96,17 @@ nav .logo {
 }
 nav .nav-link {
   color: white;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.my-profile-link {
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-dark .navbar-toggler-icon {
