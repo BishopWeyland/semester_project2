@@ -299,4 +299,8 @@ footer {
   flex-direction: row;
 }
 
+.avatar-name {
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */
