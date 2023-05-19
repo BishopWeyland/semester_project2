@@ -20,7 +20,8 @@ async function createListing(url, data) {
   } catch (error) {
     alert("We are sorry an error had occured!", error);
   } finally {
-    window.location.href = "#";
+    submitListing.reset();
+    location.reload();
   }
 }
 

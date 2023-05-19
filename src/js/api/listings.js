@@ -1,5 +1,5 @@
 import { API_BASE_URL } from "./baseurl.js";
-import { userName } from "./storage.mjs";
+import { token, userName } from "./storage.mjs";
 import { getCurrentBid } from "./curren-bids.js";
 
 const listingContainer = document.querySelector(".listing-container");
@@ -35,6 +35,10 @@ async function getListings(url) {
     }
 
     const listingSelect = document.querySelector("#select-listings");
+
+    if (!token || token === undefined) {
+      listingSelect.style.display = "none";
+    }
 
     listingSelect.addEventListener("change", (e) => {
       if (e.target.value === "my-listings") {

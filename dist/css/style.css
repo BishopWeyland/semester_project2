@@ -72,6 +72,11 @@ select {
   border-radius: 3px;
 }
 
+input,
+textarea {
+  max-width: 600px;
+}
+
 .display-flex {
   display: flex;
 }
@@ -133,6 +138,24 @@ nav .nav-link {
   border-bottom: 2px solid white;
 }
 
+footer {
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+}
+.footer-content img {
+  height: 3rem;
+}
+.footer-content span {
+  color: white;
+}
+
 .hero {
   background: linear-gradient(#798dfb, #c7e5ff);
   display: flex;
@@ -164,6 +187,10 @@ nav .nav-link {
 .filter-container {
   display: flex;
   justify-content: space-between;
+}
+
+#select-listings {
+  display: block;
 }
 
 .listing-container {
@@ -216,24 +243,6 @@ nav .nav-link {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-footer {
-  background-color: #191919;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-}
-.footer-content img {
-  height: 3rem;
-}
-.footer-content span {
-  color: white;
 }
 
 .form-container {
@@ -324,6 +333,10 @@ footer {
 
 #change-img {
   width: 100%;
+}
+
+.new-listing-container {
+  height: 80vh;
 }
 
 /*# sourceMappingURL=style.css.map */
