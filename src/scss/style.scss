@@ -81,6 +81,10 @@ select {
   border-radius: 3px;
 }
 
+.display-flex {
+  display: flex;
+}
+
 .justify-content-center {
   display: flex;
   justify-content: center;
@@ -118,6 +122,12 @@ nav {
   color: white;
   display: flex;
   align-items: center;
+
+  & img {
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
 .navbar-dark .navbar-toggler-icon {
@@ -322,6 +332,21 @@ footer {
   flex-direction: row;
 }
 
+.my-profile-container {
+  gap: 5rem;
+}
+
 .avatar-name {
   display: flex;
+  align-items: center;
+
+  & img {
+    border-radius: 50%;
+    height: 80px;
+    object-fit: cover;
+  }
+}
+
+#change-img {
+  width: 100%;
 }

@@ -49,56 +49,57 @@
         </div>
       </div>
     </nav>
-    <div>
-      <div class="my-profile-info"></div>
-      <form action="" id="change-avatar">
-        <div class="flex-column mb-4">
-          <label for="change-avatar-url"> Change avatar URL: </label>
-          <input name="change-avatar-url" id="change-avatar-url" />
-        </div>
+    <div class="my-profile-container col-12 display-flex m-5">
+      <div class="col-2">
+        <div class="my-profile-info"></div>
+        <form action="" id="change-avatar">
+          <div class="flex-column mb-4">
+            <label for="avatar"> Change avatar URL: </label>
+            <input name="avatar" id="avatar" />
+          </div>
 
-        <input
-          type="submit"
-          value="Change image"
-          id="change-img"
-          class="btn btn-dark mb-4"
-        />
-      </form>
+          <input
+            type="submit"
+            value="Change image"
+            id="change-img"
+            class="btn btn-dark mb-4"
+          />
+        </form>
+      </div>
+
+      <div class="form-container col-12 col-md-6 p-5">
+        <h2>New Listing</h2>
+        <form action="" id="submit-listing">
+          <div class="flex-column mb-4">
+            <label for="title"> Title: </label>
+            <input name="title" id="title" />
+          </div>
+          <div class="flex-column mb-4">
+            <label for="media"> Image URL: </label>
+            <input name="media" id="media" />
+          </div>
+          <div class="flex-column mb-4">
+            <label for="deadline"> Deadline: </label>
+            <input type="date" name="deadline" id="deadline" />
+          </div>
+          <div class="flex-column mb-4">
+            <label for="description"> Description: </label>
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <input
+            type="submit"
+            value="Create listing"
+            id="create-listing"
+            class="btn btn-dark mb-4"
+          />
+        </form>
+      </div>
     </div>
-
-    <div class="form-container col-12 col-md-8 p-5">
-      <h2>New Listing</h2>
-      <form action="" id="submit-listing">
-        <div class="flex-column mb-4">
-          <label for="title"> Title: </label>
-          <input name="title" id="title" />
-        </div>
-        <div class="flex-column mb-4">
-          <label for="media"> Image URL: </label>
-          <input name="media" id="media" />
-        </div>
-        <div class="flex-column mb-4">
-          <label for="deadline"> Deadline: </label>
-          <input type="date" name="deadline" id="deadline" />
-        </div>
-        <div class="flex-column mb-4">
-          <label for="description"> Description: </label>
-          <textarea
-            name="description"
-            id="description"
-            cols="30"
-            rows="10"
-          ></textarea>
-        </div>
-        <input
-          type="submit"
-          value="Create listing"
-          id="create-listing"
-          class="btn btn-dark mb-4"
-        />
-      </form>
-    </div>
-
     <footer class="mt-5">
       <div class="footer-content p-4">
         <img src="/images/quickbids_logo_white.png" alt="Quickbids logo." />
@@ -108,6 +109,7 @@
     <script src="/src/js/api/logout.js"></script>
     <script src="/src/js/api/my-profile.js" type="module"></script>
     <script src="/src/js/api/create-listing.js" type="module"></script>
+    <script src="/src/js/api/change-avatar.js" type="module"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

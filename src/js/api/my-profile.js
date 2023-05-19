@@ -17,7 +17,7 @@ async function getProfile(url) {
     const json = await response.json();
     console.log(json);
     const avatar = json.avatar
-      ? `<img src="${json.avatar}"/>`
+      ? `<img class="me-3" src="${json.avatar}"/>`
       : '<i class="fa-solid fa-user me-3"></i>';
     profileLink.innerHTML = `
     <a class="my-profile-link"href="my-profile.html">${avatar} <div>${json.name}</div></a>
@@ -25,8 +25,8 @@ async function getProfile(url) {
 
     const profileInfo = document.querySelector(".my-profile-info");
     profileInfo.innerHTML = `
-    <div class="avatar-name">
-    ${avatar} <div>${json.name}</div>
+    <div class="avatar-name mb-3">
+    ${avatar} <h1>${json.name}</h1>
     </div>
     <p>My credits: <span class="current-bid">${json.credits} credits</span></p>`;
   } catch (error) {
