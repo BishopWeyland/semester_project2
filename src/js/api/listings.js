@@ -31,12 +31,12 @@ async function getListings(url) {
     });
 
     function myListings() {
-      return json.filter((item) => item.author.name === userName);
+      return json.filter((item) => item.seller.name === userName);
     }
 
-    const postsSelect = document.querySelector("#select-listings");
+    const listingSelect = document.querySelector("#select-listings");
 
-    postsSelect.addEventListener("change", (e) => {
+    listingSelect.addEventListener("change", (e) => {
       if (e.target.value === "my-listings") {
         filteredData = myListings();
       } else {
