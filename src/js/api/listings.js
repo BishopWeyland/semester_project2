@@ -74,4 +74,6 @@ async function getListings(url) {
   }
 }
 
-getListings(`${API_BASE_URL}/api/v1/auction/listings/?_seller=true&_bids=true`);
+getListings(
+  `${API_BASE_URL}/api/v1/auction/listings/?_seller=true&_bids=true&_active=true`
+);
