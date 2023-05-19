@@ -22,6 +22,13 @@ async function getProfile(url) {
     profileLink.innerHTML = `
     <a class="my-profile-link"href="my-profile.html">${avatar} <div>${json.name}</div></a>
     `;
+
+    const profileInfo = document.querySelector(".my-profile-info");
+    profileInfo.innerHTML = `
+    <div class="avatar-name">
+    ${avatar} <div>${json.name}</div>
+    </div>
+    <p>My credits: <span class="current-bid">${json.credits} credits</span></p>`;
   } catch (error) {
     console.log(error);
   }
