@@ -1,6 +1,6 @@
 import { id } from "./single-listing.js";
 import { API_BASE_URL } from "./baseurl.js";
-import { token } from "./storage.mjs";
+import { token, credits } from "./storage.mjs";
 
 const bidForm = document.getElementById("bid-form");
 
@@ -45,7 +45,7 @@ bidForm.addEventListener("submit", async (e) => {
 
   const bidValue = Number(document.getElementById("bid-input").value);
 
-  if (bidValue >= 1 && bidValue <= 1000) {
+  if (bidValue >= 1 && bidValue <= credits) {
     const postData = { amount: bidValue };
     const bidUrl = `${API_BASE_URL}/api/v1/auction/listings/${id}/bids`;
     try {
@@ -55,6 +55,6 @@ bidForm.addEventListener("submit", async (e) => {
       console.error(error);
     }
   } else {
-    alert("Please enter a bid between 1 and 1000.");
+    alert(`Please enter a bid between 1 and ${credits}.`);
   }
 });
