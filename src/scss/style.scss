@@ -358,6 +358,18 @@ footer {
   }
 }
 
+.no-avatar {
+  background-color: map-get($colours, brand-dark-blue);
+  color: map-get($colours, brand-blue);
+  border-radius: 50%;
+  height: 70px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
 #change-img {
   width: 100%;
 }
