@@ -8,6 +8,24 @@ const name = urlParams.get("name");
 
 console.log(name);
 
+const profileContainer = document.querySelector(".profile-container");
+
+if (!token || token === undefined) {
+  profileContainer.innerHTML = `
+    <img src="../../images/undraw_mobile_login_re_9ntv.svg"/>
+    <div>
+     <h1>Please sign in to view profiles!</h1>
+      <div class="justify-content-center">
+        <a class="btn btn-light me-3" href="login.html">Login</a>
+        <a class="btn btn-dark" href="create-account.html">Create account</a>
+      </div>
+    </div>
+     
+  `;
+} else {
+  profileContainer.style.display = "none";
+}
+
 async function getProfile(url) {
   try {
     const fetchOptions = {
@@ -35,6 +53,10 @@ async function getProfile(url) {
     const profileListing = document.querySelector(".profile-listing");
     profileListing.innerHTML = `${json.name}'s listings:`;
 
+    if (!token || token === undefined) {
+      profileInfo.innerHTML = "";
+      profileListing.innerHTML = "";
+    }
     console.log(json);
   } catch (error) {
     console.log(error);
@@ -69,6 +91,9 @@ async function getUserListings(url) {
           </a>`;
     }
     console.log(json);
+    if (!token || token === undefined) {
+      listingContainer.innerHTML = "";
+    }
   } catch (error) {
     console.log(error);
   }
