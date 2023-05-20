@@ -2,8 +2,6 @@ import { token, userName } from "./storage.mjs";
 import { API_BASE_URL } from "./baseurl.js";
 import { getCurrentBid } from "./curren-bids.js";
 
-const profileLink = document.querySelector(".profile-link");
-
 async function getProfile(url) {
   try {
     const fetchOptions = {
@@ -20,9 +18,6 @@ async function getProfile(url) {
     const avatar = json.avatar
       ? `<img class="me-3" src="${json.avatar}"/>`
       : '<div class="me-3 no-avatar"><i class="fa-solid fa-user"></i></div>';
-    profileLink.innerHTML = `
-    <a class="my-profile-link"href="my-profile.html">${avatar} <div>${json.name}</div></a>
-    `;
 
     const profileInfo = document.querySelector(".my-profile-info");
     profileInfo.innerHTML = `
