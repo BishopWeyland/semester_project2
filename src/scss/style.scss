@@ -229,12 +229,10 @@ footer {
 
 .listing-card {
   background-color: map-get($colours, brand-grey);
-  width: 400px;
   border-radius: 3px;
 
   & img {
     height: 300px;
-    width: 400px;
     object-fit: cover;
     border-radius: 3px 3px 0px 0px;
   }
@@ -398,4 +396,67 @@ footer {
   justify-content: center;
   align-items: center;
   height: 80vh;
+}
+
+@media (max-width: 991px) {
+  nav {
+    & .logo {
+      height: 3rem;
+    }
+  }
+
+  .navbar-nav {
+    align-items: end;
+  }
+
+  .hero {
+    & .hero-logo {
+      height: 5rem;
+    }
+    & .hero-img {
+      height: 7.9rem;
+    }
+  }
+
+  .hero-img img {
+    height: 8.7rem;
+  }
+
+  .listing-card {
+    width: 400px;
+
+    & img {
+      width: 400px;
+    }
+  }
+  .advert-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .advert-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    & img {
+      width: 450px;
+    }
+  }
+  .my-profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .listing-card {
+    width: 300px;
+
+    & img {
+      width: 300px;
+    }
+  }
 }
