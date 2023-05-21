@@ -6,7 +6,6 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const name = urlParams.get("name");
 
-console.log(name);
 const title = document.querySelector("title");
 const profileContainer = document.querySelector(".profile-container");
 
@@ -63,9 +62,8 @@ async function getProfile(url) {
       profileInfo.innerHTML = "";
       profileListing.innerHTML = "";
     }
-    console.log(json);
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 }
 getProfile(`${API_BASE_URL}/api/v1/auction/profiles/${name}`);
@@ -96,12 +94,11 @@ async function getUserListings(url) {
             </div>
           </a>`;
     }
-    console.log(json);
     if (!token || token === undefined) {
       listingContainer.innerHTML = "";
     }
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 }
 

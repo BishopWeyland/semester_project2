@@ -22,7 +22,7 @@ async function getProfileLink(url) {
     <a class="my-profile-link"href="my-profile.html">${avatar} <div>${json.name}</div></a>
     `;
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 }
 getProfileLink(`${API_BASE_URL}/api/v1/auction/profiles/${userName}`);

@@ -17,7 +17,6 @@ async function getProfile(url) {
 
     const response = await fetch(url, fetchOptions);
     const json = await response.json();
-    console.log(json);
     const avatar = json.avatar
       ? `<img class="me-3" src="${json.avatar}"/>`
       : '<div class="me-3 no-avatar"><i class="fa-solid fa-user"></i></div>';
@@ -29,7 +28,7 @@ async function getProfile(url) {
     </div>
     <p>My credits: <span class="current-bid">${json.credits} credits</span></p>`;
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 }
 getProfile(`${API_BASE_URL}/api/v1/auction/profiles/${userName}`);
@@ -60,9 +59,8 @@ async function getMyListings(url) {
             </div>
           </a>`;
     }
-    console.log(json);
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 }
 

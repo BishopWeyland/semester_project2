@@ -28,7 +28,7 @@ const makeBid = async (url, data) => {
     const jsonResponse = await response.json();
     return jsonResponse;
   } catch (error) {
-    console.error(error);
+    alert(error);
     throw new Error(`Error making bid: ${error.message}`);
   } finally {
     document.getElementById("bid-input").value = "";
@@ -50,9 +50,8 @@ bidForm.addEventListener("submit", async (e) => {
     const bidUrl = `${API_BASE_URL}/api/v1/auction/listings/${id}/bids`;
     try {
       const response = await makeBid(bidUrl, postData);
-      console.log(response);
     } catch (error) {
-      console.error(error);
+      alert(error);
     }
   } else {
     alert(`Please enter a bid between 1 and ${credits}.`);

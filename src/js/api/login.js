@@ -12,9 +12,7 @@ async function login(url, data) {
     };
 
     const response = await fetch(url, postData);
-    console.log(response);
     const json = await response.json();
-    console.log(json);
     const accessToken = json.accessToken;
     localStorage.setItem(`accessToken`, accessToken);
     localStorage.setItem(`name`, json.name);

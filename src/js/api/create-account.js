@@ -12,11 +12,10 @@ async function registerUser(url, data) {
     };
 
     const response = await fetch(url, postData);
-    console.log(response);
     const json = await response.json();
     return json;
   } catch (error) {
-    alert("We are sorry an error had occured!", error);
+    alert("We are sorry an error has occured!", error);
   } finally {
     window.location.href = "login.html";
   }

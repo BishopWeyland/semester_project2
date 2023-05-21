@@ -16,7 +16,7 @@ const changeAvatar = async (url, data) => {
     const json = await res.json();
     return json;
   } catch (error) {
-    console.log(error);
+    alert(error);
     throw error;
   } finally {
     changeImg.reset();

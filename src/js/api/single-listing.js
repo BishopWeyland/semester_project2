@@ -24,7 +24,6 @@ const getListing = async function (url) {
       },
     });
     const item = await res.json();
-    console.log(item);
 
     const allBids = item.bids;
 
@@ -79,7 +78,7 @@ const getListing = async function (url) {
 `;
     title.innerHTML = `${item.title} | QuickBids`;
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 };
 

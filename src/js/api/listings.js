@@ -9,8 +9,6 @@ async function getListings(url) {
     const response = await fetch(url);
     const json = await response.json();
 
-    console.log(json);
-
     let filteredData = json;
 
     const searchForm = document.querySelector("#search-input");
@@ -74,7 +72,7 @@ async function getListings(url) {
 
     renderListings(filteredData);
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 }
 

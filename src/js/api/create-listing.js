@@ -14,7 +14,6 @@ async function createListing(url, data) {
     };
 
     const response = await fetch(url, postData);
-    console.log(response);
     const json = await response.json();
     return json;
   } catch (error) {
