@@ -486,6 +486,10 @@ nav {
 }
 
 @media (max-width: 420px) {
+  #select-listings {
+    width: 57px;
+  }
+
   .listing-card {
     width: 300px;
     & img,
