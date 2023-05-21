@@ -63,43 +63,46 @@
         </div>
       </div>
     </nav>
-    <div class="col-12 my-5 single-listing-container justify-content-center">
-      <div class="listing-img col-12 col-lg-4 me-4"></div>
-      <div class="listing-content-container col-12 col-lg-6 p-4">
-        <div class="listing-content"></div>
-        <div class="bid-form-container">
-          <form id="bid-form">
-            <input
-              class="mb-3"
-              type="number"
-              id="bid-input"
-              name="bid"
-              min="1"
-              required
-            />
-            <button class="btn btn-dark mb-3" type="submit" id="bid-button">
-              Place Bid
-            </button>
-          </form>
-          <div>
-            <button
-              class="btn btn-light mb-3"
-              id="view-bid-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseExample"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              View bids
-            </button>
-          </div>
-          <div class="collapse" id="collapseExample">
-            <div class="view-bids scrollable-container p-3"></div>
+    <main>
+      <div class="col-12 my-5 single-listing-container justify-content-center">
+        <div class="listing-img col-12 col-lg-4 me-4"></div>
+        <div class="listing-content-container col-12 col-lg-6 p-4">
+          <div class="listing-content"></div>
+          <div class="bid-form-container">
+            <form id="bid-form">
+              <input
+                class="mb-3"
+                type="number"
+                id="bid-input"
+                name="bid"
+                min="1"
+                required
+              />
+              <button class="btn btn-dark mb-3" type="submit" id="bid-button">
+                Place Bid
+              </button>
+            </form>
+            <div>
+              <button
+                class="btn btn-light mb-3"
+                id="view-bid-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                View bids
+              </button>
+            </div>
+            <div class="collapse" id="collapseExample">
+              <div class="view-bids scrollable-container p-3"></div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
+
     <footer class="mt-7">
       <div class="footer-content p-4">
         <img src="/images/quickbids_logo_white.png" alt="Quickbids logo." />
