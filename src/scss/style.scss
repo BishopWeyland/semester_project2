@@ -453,6 +453,10 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+
+    & img {
+      width: 30rem;
+    }
   }
   .my-profile-container {
     display: flex;
@@ -499,6 +503,10 @@ nav {
 
       object-fit: cover;
     }
+  }
+
+  .advert-img img {
+    width: 20rem;
   }
 
   .listing-content-container {

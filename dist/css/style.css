@@ -415,6 +415,9 @@ nav .nav-link {
     display: flex;
     justify-content: center;
   }
+  .advert-img img {
+    width: 30rem;
+  }
   .my-profile-container {
     display: flex;
     flex-direction: column;
@@ -452,6 +455,9 @@ nav .nav-link {
   .listing-img img {
     width: 100%;
     object-fit: cover;
+  }
+  .advert-img img {
+    width: 20rem;
   }
   .listing-content-container {
     min-height: 50vh;
