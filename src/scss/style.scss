@@ -304,7 +304,6 @@ nav {
 // single-listing page
 .single-listing-container {
   display: flex;
-  height: 70vh;
 }
 
 .listing-img {
@@ -312,6 +311,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 60vh;
 }
 
 .listing-img img {
@@ -322,6 +322,8 @@ nav {
 
 .listing-content-container {
   background-color: map-get($colours, brand-grey);
+  height: max-content;
+  min-height: 60vh;
 }
 
 .timer {
@@ -497,6 +499,10 @@ nav {
 
       object-fit: cover;
     }
+  }
+
+  .listing-content-container {
+    min-height: 50vh;
   }
 
   .bids-info {
