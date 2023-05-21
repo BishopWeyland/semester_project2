@@ -453,7 +453,7 @@ nav .nav-link {
     width: 100%;
     object-fit: cover;
   }
-  .listing-container {
+  .listing-content-container {
     height: 60vh;
   }
   .bids-info {
