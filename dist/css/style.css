@@ -120,6 +120,10 @@ textarea {
   align-items: center;
 }
 
+.text-align {
+  text-align: center;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
