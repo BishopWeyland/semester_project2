@@ -46,6 +46,12 @@ async function getMyListings(url) {
     };
     const response = await fetch(url, fetchOptions);
     const json = await response.json();
+
+    const profileListing = document.querySelector(".profile-listing");
+    if (json.length === 0) {
+      profileListing.innerHTML = "";
+    }
+
     for (let i = 0; i < json.length; i++) {
       const allBids = json[i].bids;
       const currentBid = getCurrentBid(allBids);

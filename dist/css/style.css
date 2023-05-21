@@ -386,6 +386,11 @@ nav .nav-link {
   font-size: 50px;
 }
 
+#change-avatar {
+  margin: 0;
+  width: 100%;
+}
+
 #change-img {
   width: 100%;
 }
