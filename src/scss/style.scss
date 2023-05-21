@@ -67,6 +67,7 @@ button {
 }
 
 .btn {
+  font-family: "Kanit", sans-serif !important;
   max-width: 600px;
 }
 
@@ -104,6 +105,7 @@ select {
   border: none;
   border-radius: 0;
   height: auto;
+  font-family: "Kanit", sans-serif !important;
 }
 
 form {
@@ -552,5 +554,9 @@ nav {
 
   .bids-info {
     flex-direction: column-reverse;
+  }
+
+  #deadline {
+    width: 100%;
   }
 }
