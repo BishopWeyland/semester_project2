@@ -40,7 +40,7 @@ submitListing.addEventListener("submit", (e) => {
   }
 
   if (!checkLength(description, 20)) {
-    alert("Password needs to be atleast 20 characters!");
+    alert("Description needs to be atleast 20 characters!");
     return;
   }
 
