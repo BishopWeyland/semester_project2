@@ -472,9 +472,9 @@ nav {
 
   .listing-img {
     background-color: map-get($colours, brand-white);
+
     & img {
-      width: 100%;
-      height: 100%;
+      width: 60%;
     }
   }
 }
@@ -486,6 +486,16 @@ nav {
     svg {
       width: 300px;
       height: 200px;
+    }
+  }
+
+  .listing-img {
+    background-color: map-get($colours, brand-white);
+    height: 40vh;
+    & img {
+      width: 100%;
+
+      object-fit: cover;
     }
   }
 }
