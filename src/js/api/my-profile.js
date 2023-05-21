@@ -2,6 +2,9 @@ import { token, userName } from "./storage.mjs";
 import { API_BASE_URL } from "./baseurl.js";
 import { getCurrentBid } from "./curren-bids.js";
 
+const title = document.querySelector(".my-title");
+title.innerHTML = `${userName} | Quickbids`;
+
 async function getProfile(url) {
   try {
     const fetchOptions = {
