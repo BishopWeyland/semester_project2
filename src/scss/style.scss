@@ -11,6 +11,28 @@
 
 body {
   background-color: map-get($colours, brand-white) !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer {
+  background-color: map-get($colours, brand-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  & img {
+    height: 3rem;
+  }
+
+  & span {
+    color: white;
+  }
 }
 
 h1,
@@ -150,25 +172,6 @@ nav {
 
   &:hover {
     border-bottom: 2px solid white;
-  }
-}
-
-footer {
-  background-color: map-get($colours, brand-black);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  & img {
-    height: 3rem;
-  }
-
-  & span {
-    color: white;
   }
 }
 
@@ -419,6 +422,14 @@ footer {
     & .hero-img {
       height: 7.9rem;
     }
+  }
+  footer {
+    & span {
+      font-size: 0.7rem;
+    }
+  }
+  .footer-content img {
+    height: 1.2rem;
   }
 
   .hero-img img {

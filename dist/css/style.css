@@ -5,6 +5,28 @@
 
 body {
   background-color: #fbfbfb !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+}
+.footer-content img {
+  height: 3rem;
+}
+.footer-content span {
+  color: white;
 }
 
 h1,
@@ -138,24 +160,6 @@ nav .nav-link {
 }
 .logout-button:hover {
   border-bottom: 2px solid white;
-}
-
-footer {
-  background-color: #191919;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-}
-.footer-content img {
-  height: 3rem;
-}
-.footer-content span {
-  color: white;
 }
 
 .hero {
@@ -385,6 +389,12 @@ footer {
   }
   .hero .hero-img {
     height: 7.9rem;
+  }
+  footer span {
+    font-size: 0.7rem;
+  }
+  .footer-content img {
+    height: 1.2rem;
   }
   .hero-img img {
     height: 8.7rem;
