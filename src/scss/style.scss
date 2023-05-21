@@ -486,8 +486,17 @@ nav {
 }
 
 @media (max-width: 420px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 10px;
+
+    & input {
+      width: 100%;
+    }
+  }
+
   #select-listings {
-    width: 57px;
+    justify-content: center;
   }
 
   .listing-card {
