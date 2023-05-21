@@ -451,9 +451,6 @@ nav .nav-link {
     width: 100%;
     object-fit: cover;
   }
-  .scrollable-container {
-    height: 120px;
-  }
   .bids-info {
     flex-direction: column-reverse;
   }
