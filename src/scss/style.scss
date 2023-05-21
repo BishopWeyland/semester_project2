@@ -312,7 +312,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
 }
 
 .listing-img img {
@@ -323,7 +322,6 @@ nav {
 
 .listing-content-container {
   background-color: map-get($colours, brand-grey);
-  height: 50vh;
 }
 
 .timer {
@@ -499,10 +497,6 @@ nav {
 
       object-fit: cover;
     }
-  }
-
-  .listing-content-container {
-    height: 60vh;
   }
 
   .bids-info {
