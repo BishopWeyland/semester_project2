@@ -382,6 +382,9 @@ nav .nav-link {
   align-items: center;
   height: 80vh;
 }
+.profile-container img {
+  width: 40%;
+}
 
 @media (max-width: 991px) {
   nav .logo {
@@ -390,17 +393,17 @@ nav .nav-link {
   .navbar-nav {
     align-items: end;
   }
-  .hero .hero-logo {
-    height: 5rem;
-  }
-  .hero .hero-img {
-    height: 7.9rem;
-  }
   footer span {
     font-size: 0.7rem;
   }
   .footer-content img {
     height: 1.2rem;
+  }
+  .hero .hero-logo {
+    height: 5rem;
+  }
+  .hero .hero-img {
+    height: 7.9rem;
   }
   .hero-img img {
     height: 8.7rem;
@@ -428,6 +431,10 @@ nav .nav-link {
   }
   .profile-listing {
     margin: 0 auto;
+  }
+  .profile-container {
+    flex-direction: column;
+    gap: 20px;
   }
   .single-listing-container {
     flex-direction: column;
