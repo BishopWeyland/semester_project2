@@ -1,5 +1,7 @@
 # Quickbids | Noroff semester project 2
 
+![image](/images/Skjermbilde%202023-05-21%20kl.%2019.44.04.png)
+
 ## Description
 
 The assignment for the semester project was to make an auction house website based on the Noroff API. New users get 1000 credits to bid on listings. Users may bid on listings and post their own listings. Non registered users may look and search through listings.
