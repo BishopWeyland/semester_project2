@@ -7,14 +7,14 @@ const urlParams = new URLSearchParams(queryString);
 const name = urlParams.get("name");
 
 console.log(name);
-
+const title = document.querySelector("title");
 const profileContainer = document.querySelector(".profile-container");
 
 if (!token || token === undefined) {
   profileContainer.innerHTML = `
     <img src="../../images/undraw_mobile_login_re_9ntv.svg"/>
     <div>
-     <h1 class="text-align">Please sign in to view profiles!</h1>
+     <h1 class="text-align mb-3">Please sign in to view profiles!</h1>
       <div class="justify-content-center">
         <a class="btn btn-light me-3" href="login.html">Login</a>
         <a class="btn btn-dark" href="create-account.html">Create account</a>
@@ -38,6 +38,12 @@ async function getProfile(url) {
 
     const response = await fetch(url, fetchOptions);
     const json = await response.json();
+
+    if (!token || token === undefined) {
+      title.innerHTML = `Quickbids`;
+    } else {
+      title.innerHTML = `${json.name} | Quickbids`;
+    }
 
     const avatar = json.avatar
       ? `<img class="me-3" src="${json.avatar}"/>`
