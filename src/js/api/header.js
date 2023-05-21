@@ -17,7 +17,7 @@ async function getProfileLink(url) {
     const json = await response.json();
     const avatar = json.avatar
       ? `<img class="me-3" src="${json.avatar}"/>`
-      : '<div class="me-3 no-avatar"><i class="fa-solid fa-user"></i></div>';
+      : '<div class="me-3 no-avatar-link"><i class="fa-solid fa-user"></i></div>';
     profileLink.innerHTML = `
     <a class="my-profile-link"href="my-profile.html">${avatar} <div>${json.name}</div></a>
     `;
