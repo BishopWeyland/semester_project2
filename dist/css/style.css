@@ -439,6 +439,14 @@ nav .nav-link {
     width: 60%;
   }
 }
+@media (max-width: 650px) {
+  #bid-form {
+    width: 100%;
+  }
+  #view-bid-button {
+    width: 100%;
+  }
+}
 @media (max-width: 420px) {
   .filter-container {
     flex-direction: column;
