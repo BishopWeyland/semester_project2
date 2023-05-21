@@ -498,4 +498,8 @@ nav {
       object-fit: cover;
     }
   }
+
+  .bids-info {
+    flex-direction: column-reverse;
+  }
 }

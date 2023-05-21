@@ -451,6 +451,9 @@ nav .nav-link {
     width: 100%;
     object-fit: cover;
   }
+  .bids-info {
+    flex-direction: column-reverse;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
