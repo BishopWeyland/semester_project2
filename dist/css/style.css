@@ -5,13 +5,13 @@
 
 body {
   background-color: #fbfbfb !important;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
 }
 
 main {
-  flex: 1;
+  flex: 1 !important;
 }
 
 footer {
@@ -19,7 +19,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  margin-top: auto !important;
 }
 
 .footer-content {
@@ -450,9 +450,6 @@ nav .nav-link {
   .listing-img img {
     width: 100%;
     object-fit: cover;
-  }
-  .scrollable-container {
-    height: 100px;
   }
   .bids-info {
     flex-direction: column-reverse;
